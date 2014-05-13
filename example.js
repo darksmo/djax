@@ -9,7 +9,7 @@ jQuery('document').ready(function($) {
 		//     $newEl.show();
 		//     $newEl.fadeIn("fast");
 		// });
-		
+
 		// ** Fadeout then slide in **
 		$oldEl.fadeOut('fast', function () {
 			$oldEl.after($newEl);
@@ -22,15 +22,15 @@ jQuery('document').ready(function($) {
 		});
 
 
-    }
+    };
 
    $('body').djax({
-       'selector' : '.one-third', 
-       'exceptions' : [], 
-       'replaceBlockFunction' : transition
+     'selector' : '.one-third',
+     'exceptions' : [],
+     'replaceBlockFunction' : transition
    });
 
    $(window).bind('djaxLoad', function(e, params) {
     console.log($('<div>'+params.response+'</div>'));
-   })
+   });
 });
